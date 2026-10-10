@@ -68,7 +68,7 @@ async function execOne(
 
 	let args: any;
 	try {
-		args = JSON.parse(tc.function.arguments || "{}");
+		args = JSON.parse(tc.function.arguments || "{}") ?? {};
 	} catch {
 		return "错误：工具参数不是合法 JSON，请修正后重试";
 	}
